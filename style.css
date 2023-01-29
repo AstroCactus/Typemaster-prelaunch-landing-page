@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow:wght@500;700;900&family=Big+Shoulders+Display:wght@800;900&family=IBM+Plex+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Merriweather:ital@0;1&family=Outfit:wght@300;400;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Red+Hat+Display:wght@500;700;900&family=Space+Mono&family=Work+Sans:wght@400;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Barlow;
+    font-family: Barlow; 
+    padding: 0 120px 0 120px;
+    width: 100vw;
+    min-height: 100vh;  
 }
 
 :root {
     font-size: 16px;
 }
-
-main {
-    width: 100vw;
-    min-height: 100vh;      
-    padding: 1.5rem;  
-} 
 
 .header {
     display: flex;
@@ -93,14 +96,14 @@ main {
         .twoimages {
             display: flex;   
             align-items: center;    
-            column-gap: 24px;
+            width: 100%;
+            column-gap: 7px;
             height: 193px;  
             margin-top: 24px;
             margin-bottom: 24px;   
             padding: 0;       
         }
-            .imageTwo {    
-                margin-left: -50px;            
+            .imageTwo {              
                 width: 129px;
                 height: 193px;
                 opacity: 0.3;             
@@ -110,11 +113,23 @@ main {
                 border-bottom-right-radius: 20px;
             }
 
+            .transparent {
+                background-color: #FF9B62;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                margin-left: -50px; 
+                width: 129px;
+            }
+
             .imageThree {
                 width: 220px;
                 height: 193px; 
                 border-radius: 20px; 
             }
+
+        p {
+            padding-top: 24px;
+        }
 
         .rel {
             display: flex;
@@ -146,17 +161,6 @@ main {
             background-color: #E8EFF2;
         }
     
-            .overlay {
-                margin-left: -154px;
-                width: 129px;
-                height: 193px;
-                background-color: #F16718;           
-                border-top-left-radius: none;
-                border-bottom-left-radius: none;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-            }
-
         h2 {
             font-size: 2rem;
             font-weight: 900;
@@ -258,7 +262,7 @@ main {
 @media screen and (min-width: 768px) {
 
     main {
-        padding: 2.5rem;
+        padding: 3rem 10rem 3rem 10rem;  
     }
 
     .imageOne,
@@ -311,10 +315,11 @@ main {
     .twoimages {
         display: flex;
         height: 320px;
-        column-gap: 30px;
-        align-items: left;
+        width: 688px;
+        column-gap: 13px;
+        align-items: center;
         border-radius: 20px; 
-        margin: 30px auto;
+        margin: 30px 0;
     }
 
         .imageTwo-t {
@@ -324,17 +329,18 @@ main {
             opacity: 0.3;   
         }
 
+        .transparent-t {
+            background-color: #FF9B62;
+            border-radius: 20px;
+            margin-left: -50px; 
+            width: 214px;  
+            height: 320px;  
+        }
+
         .imageThree-t {
             width: 445px; 
             height: 320px;              
             border-radius: 20px; 
-        }
-
-        .overlay {           
-            width: 214px;  
-            height: 320px;  
-            border-radius: 20px;
-            margin-left: -245px;
         }
 
     .mechanical {
@@ -355,9 +361,10 @@ main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: left;
+        align-items: space-between;
         width: 43rem;
-        column-gap: 4rem;
+        column-gap: 7rem;
+        margin: 0;
     }
 
     .flex-divs {
@@ -392,7 +399,7 @@ main {
 @media screen and (min-width: 1440px) {
    
     main {
-        padding: 40px  170px;
+        padding: 40px  5rem;
     }
 
     .header {
@@ -407,24 +414,40 @@ main {
         width: 540px;
         height: 480px;
         border-radius: 20px;
+        margin-left: 6rem;
     }
 
     .twoimages {
         display: flex;
+        column-gap: 2rem;
         width: 100%;
         height: 480px;
-        column-gap: 2rem;
-        border-radius: 0;
-        margin: 30px auto;
         margin-bottom: 9rem;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
     }
+
+        .pattern2 {
+            width: 255px;
+            height: 240px;
+            align-self: flex-end;
+            padding-right: 3rem;
+            margin-left: -15rem;
+        }
+
         .imageTwo-d {
             width: 255px;
             height: 480px;
             border-radius: 20px;
             opacity: 0.3; 
+        }
+
+        .transparent-d {
+            background-color: #FF9B62;
+            border-radius: 20px;
+            margin-left: -50px; 
+            width: 255px;
+            height: 480px; 
         }
 
         .imageThree-d {
@@ -435,7 +458,7 @@ main {
 
         .mechanical-desk {
             display: flex;
-            width: 16rem;
+            width: 18rem;
             flex-direction: column;
             row-gap: 1rem;
         }  
@@ -466,7 +489,9 @@ main {
     .imageTwo-t,
     .imageThree-t,
     .overlay,
-    .mechanical {
+    .mechanical,
+    .transparent,
+    .transparent-t {
         display: none;
     }
 
@@ -484,16 +509,9 @@ main {
         align-self: flex-start;
     }
 
-    .pattern2 {
-        width: 255px;
-        height: 240px;
-        align-self: flex-end;
-        margin-left: -45rem;
-    }
-
     .upperCont {
-        width: 1110px;
-        column-gap: 30px;
+        width: 100%;
+        column-gap: 2rem;
         overflow: visible;
     }
 
@@ -503,15 +521,12 @@ main {
         line-height: 26px;
     }
 
-    .all-and-images {
-        width: 1440px;
-    }
-
     .lower-cont {
         justify-content: space-between;
         flex-wrap: nowrap;
         column-gap: 2rem;
     }
+
         .flex-divs {
             display: flex;
             margin: 0;
